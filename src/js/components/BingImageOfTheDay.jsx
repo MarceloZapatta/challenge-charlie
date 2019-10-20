@@ -1,9 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import '../../css/ImageOfTheDay.css';
+import '../../css/BingImageOfTheDay.css';
 
-export default class ImageOfTheDay extends React.Component {
+export default class BingImageOfTheDay extends React.Component {
   componentDidMount() {
     this.getBingImageOfTheDay();
   }
@@ -30,11 +30,11 @@ export default class ImageOfTheDay extends React.Component {
   }
 }
 
-ImageOfTheDay.propTypes = {
+BingImageOfTheDay.propTypes = {
   setBingImageOfTheDay: PropTypes.func.isRequired,
   urlBingImageOfTheDay: PropTypes.string,
 };
 
-ImageOfTheDay.defaultProps = {
+BingImageOfTheDay.defaultProps = {
   urlBingImageOfTheDay: '',
 };

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { setBingImageOfTheDay } from '../actions';
-import ImageOfTheDay from '../components/ImageOfTheDay';
+import BingImageOfTheDay from '../components/BingImageOfTheDay';
 
 const mapStateToProps = (state) => ({ urlBingImageOfTheDay: state.urlBingImageOfTheDay });
 
@@ -8,9 +8,9 @@ const mapDispatchToProps = (dispatch) => ({
   setBingImageOfTheDay: (url) => dispatch(setBingImageOfTheDay(url)),
 });
 
-const BingImageOfTheDay = connect(
+const BingImageOfTheDayContract = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(ImageOfTheDay);
+)(BingImageOfTheDay);
 
-export default BingImageOfTheDay;
+export default BingImageOfTheDayContract;

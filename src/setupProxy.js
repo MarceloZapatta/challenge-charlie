@@ -10,4 +10,13 @@ module.exports = (app) => {
       pathRewrite: { '^/bing-api': '' },
     }),
   );
+
+  app.use(
+    '/maps-api',
+    proxy({
+      target: 'https://maps.googleapis.com',
+      changeOrigin: true,
+      pathRewrite: { '^/maps-api': '' }
+    }),
+  );
 };
